@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-//@SpringBootApplication
+
 
 @RestController
-@EnableAutoConfiguration
+@SpringBootApplication // В данном случае аннотация @SpringBootApplication заменяет собой аннотации @Configuration, @EnableAutoConfiguration и @ComponentScan.
+//@EnableAutoConfiguration
 public class SpringbootdemoApplication {
 
 	@RequestMapping("/")
