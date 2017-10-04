@@ -4,4 +4,5 @@ server:
 type: Framework
 name: Spring Boot ${type}
 
-my.messageValue: ${random.int}
+my:
+  messageValue: ${random.value}

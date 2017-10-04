@@ -1,22 +1,19 @@
 package com.oreily;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
 /**
  * Created by Александр on 04.10.2017.
  */
-@Component
+//@Component
 public class MyMessage {
 
-    @Value("${my.messageValue}")
-    private int messageValue;
+    //@Value("${my.messageValue}")
+    private String messageValue;
 
-    public int getMessageValue() {
+    public String getMessageValue() {
         return messageValue;
     }
 
-    public void setMessageValue(int messageValue) {
+    public void setMessageValue(String messageValue) {
         this.messageValue = messageValue;
     }
 
