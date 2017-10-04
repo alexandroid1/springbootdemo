@@ -12,10 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication // В данном случае аннотация @SpringBootApplication заменяет собой аннотации @Configuration, @EnableAutoConfiguration и @ComponentScan.
-
 public class SpringbootdemoApplication {
 
-	@Value("${name}")
+	@Autowired
+	private MyMessage myMessage;
+
+	@RequestMapping("/")
+	public String welcome(){
+		return "welcome, your lucky number is " + myMessage.getMessageValue();
+	}
+
+
+/*	@Value("${name}")
 	String name;
 
 	@Autowired
@@ -24,7 +32,7 @@ public class SpringbootdemoApplication {
 	@RequestMapping("/")
 	public String home(){
 		return message;
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootdemoApplication.class, args);
