@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication // В данном случае аннотация @SpringBootApplication заменяет собой аннотации @Configuration, @EnableAutoConfiguration и @ComponentScan.
-@EnableConfigurationProperties(value = MyMessage.class)
+//@EnableConfigurationProperties(value = MyMessage.class)
 public class SpringbootdemoApplication {
 
 	@Autowired
