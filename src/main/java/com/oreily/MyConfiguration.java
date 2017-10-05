@@ -9,27 +9,19 @@ import org.springframework.context.annotation.Profile;
  * Created by Александр on 29.09.2017.
  */
 
-@Configuration
+//@Configuration
 public class MyConfiguration {
 
-    @Bean
+/*    @Bean
     public String message(){
         return "Hello OReily";
-    }
+    }*/
 
-    @Bean
-    @Profile("prod")
+   // @Bean
     public MyMessage myMessage(@Value("${my.messageValue}") String messageValue){
         MyMessage myMessage = new MyMessage();
         myMessage.setMessageValue(messageValue);
         return myMessage;
     }
 
-    @Bean
-    @Profile("dev")
-    public MyMessage myMessageDev(){
-        MyMessage myMessage = new MyMessage();
-        myMessage.setMessageValue("This is the dev method");
-        return myMessage;
-    }
 }
