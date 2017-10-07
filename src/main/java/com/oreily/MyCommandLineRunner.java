@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Александр on 07.10.2017.
  */
-@Component
+//@Component
 public class MyCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
